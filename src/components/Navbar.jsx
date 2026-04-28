@@ -14,12 +14,12 @@ export default function Navbar({ openBooking }) {
       >
         <div className="flex items-center gap-2 md:gap-3">
           <img src="/logo.png" alt="Dr. Suchithra's Clinic Logo" className="w-10 h-10 md:w-14 md:h-14 object-contain mix-blend-multiply contrast-125 saturate-150 drop-shadow-sm" />
-          <span className="font-serif font-semibold text-base md:text-lg text-slate-800 hidden md:block">
+          <span className="font-serif font-semibold text-base md:text-lg text-slate-800 hidden lg:block">
             Dr. Suchithra's Skin & Hair
           </span>
         </div>
 
-        <div className="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-600">
+        <div className="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-medium text-slate-600">
           <a href="#about" className="hover:text-brand-600 transition-colors">About</a>
           <a href="#services" className="hover:text-brand-600 transition-colors">Services</a>
           <a href="#reviews" className="hover:text-brand-600 transition-colors">Reviews</a>
@@ -32,7 +32,7 @@ export default function Navbar({ openBooking }) {
           </button>
           
           <button 
-            className="lg:hidden text-slate-600 p-1.5 focus:outline-none"
+            className="md:hidden text-slate-600 p-1.5 focus:outline-none"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle Menu"
           >
@@ -53,7 +53,7 @@ export default function Navbar({ openBooking }) {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="w-full max-w-6xl mt-2 glass rounded-3xl p-5 flex flex-col gap-4 shadow-lg lg:hidden"
+            className="w-full max-w-6xl mt-2 glass rounded-3xl p-5 flex flex-col gap-4 shadow-lg md:hidden"
           >
             <a href="#about" onClick={() => setIsMenuOpen(false)} className="text-slate-700 font-medium hover:text-brand-600 transition-colors text-center text-lg pb-2 border-b border-white/20">About</a>
             <a href="#services" onClick={() => setIsMenuOpen(false)} className="text-slate-700 font-medium hover:text-brand-600 transition-colors text-center text-lg pb-2 border-b border-white/20">Services</a>
