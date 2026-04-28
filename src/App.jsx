@@ -12,7 +12,7 @@ function App() {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
 
   return (
-    <div className="font-sans antialiased bg-brand-50 relative">
+    <div className="font-sans antialiased bg-brand-50 relative overflow-x-hidden w-full">
       <Navbar openBooking={() => setIsBookingOpen(true)} />
       <HeroSection openBooking={() => setIsBookingOpen(true)} />
       <AboutSection />
