@@ -8,17 +8,19 @@ export default {
     extend: {
       colors: {
         brand: {
-          50: '#fdf2f8',
-          100: '#fce7f3',
-          200: '#fbcfe8',
-          300: '#f9a8d4',
-          400: '#f472b6',
-          500: '#ec4899',
-          600: '#db2777',
-          700: '#be185d',
-          800: '#9d174d',
-          900: '#831843',
-        }
+          50: '#faf9f8', /* Very light beige/white */
+          100: '#f5f4f1', /* Light beige */
+          200: '#e8e5df', /* Soft gray beige */
+          300: '#d7d2c9', /* Sand */
+          400: '#c1b8ad', 
+          500: '#a79c8e', /* Primary Accent - muted taupe */
+          600: '#8c8072',
+          700: '#75695d',
+          800: '#60564d', /* Dark text accent */
+          900: '#524942',
+        },
+        'novesse-green': '#0a2e1d',
+        'novesse-gold': '#b68c48',
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],

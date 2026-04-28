@@ -6,7 +6,7 @@ const reviews = [
   {
     name: "Aarya Menon",
     location: "THIRUVANANTHAPURAM",
-    text: "Dr. Suchithra's care is unmatched. My skin has never felt this calm and confident. Truly a sanctuary in Karamana."
+    text: "Dr. Emily's care is unmatched. My skin has never felt this calm and confident. Truly a sanctuary downtown."
   },
   {
     name: "Riya Krishnan",

@@ -1,8 +1,18 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Navbar({ openBooking }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const navLinks = [
+    { name: 'Home', path: '/' },
+    { name: 'About', path: '/about' },
+    { name: 'Services', path: '/services' },
+    { name: 'Gallery', path: '/gallery' },
+    { name: 'Blog', path: '/blog' },
+    { name: 'Contact', path: '/contact' },
+  ];
 
   return (
     <div className="fixed top-4 left-0 w-full z-50 flex flex-col items-center px-4">
@@ -12,18 +22,19 @@ export default function Navbar({ openBooking }) {
         transition={{ duration: 0.6 }}
         className="w-full max-w-6xl glass rounded-full px-4 md:px-6 py-2.5 md:py-3 flex items-center justify-between shadow-lg shadow-pink-100/50"
       >
-        <div className="flex items-center gap-2 md:gap-3">
-          <img src="/logo.png" alt="Dr. Suchithra's Clinic Logo" className="w-10 h-10 md:w-14 md:h-14 object-contain mix-blend-multiply contrast-125 saturate-150 drop-shadow-sm" />
+        <Link to="/" className="flex items-center gap-2 md:gap-3">
+          <img src="/logo.png" alt="Aura Skin Clinic Logo" className="w-10 h-10 md:w-14 md:h-14 object-contain mix-blend-multiply contrast-125 saturate-150 drop-shadow-sm" />
           <span className="font-serif font-semibold text-base md:text-lg text-slate-800 hidden lg:block">
-            Dr. Suchithra's Skin & Hair
+            Aura Skin & Hair Clinic
           </span>
-        </div>
+        </Link>
 
-        <div className="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-medium text-slate-600">
-          <a href="#about" className="hover:text-brand-600 transition-colors">About</a>
-          <a href="#services" className="hover:text-brand-600 transition-colors">Services</a>
-          <a href="#reviews" className="hover:text-brand-600 transition-colors">Reviews</a>
-          <a href="#contact" className="hover:text-brand-600 transition-colors">Contact</a>
+        <div className="hidden md:flex items-center gap-4 lg:gap-8 text-sm font-medium text-slate-600">
+          {navLinks.map((link) => (
+            <Link key={link.name} to={link.path} className="hover:text-brand-600 transition-colors">
+              {link.name}
+            </Link>
+          ))}
         </div>
 
         <div className="flex items-center gap-2 md:gap-4">
@@ -55,10 +66,16 @@ export default function Navbar({ openBooking }) {
             exit={{ opacity: 0, y: -10 }}
             className="w-full max-w-6xl mt-2 glass rounded-3xl p-5 flex flex-col gap-4 shadow-lg md:hidden"
           >
-            <a href="#about" onClick={() => setIsMenuOpen(false)} className="text-slate-700 font-medium hover:text-brand-600 transition-colors text-center text-lg pb-2 border-b border-white/20">About</a>
-            <a href="#services" onClick={() => setIsMenuOpen(false)} className="text-slate-700 font-medium hover:text-brand-600 transition-colors text-center text-lg pb-2 border-b border-white/20">Services</a>
-            <a href="#reviews" onClick={() => setIsMenuOpen(false)} className="text-slate-700 font-medium hover:text-brand-600 transition-colors text-center text-lg pb-2 border-b border-white/20">Reviews</a>
-            <a href="#contact" onClick={() => setIsMenuOpen(false)} className="text-slate-700 font-medium hover:text-brand-600 transition-colors text-center text-lg pb-2">Contact</a>
+            {navLinks.map((link) => (
+              <Link 
+                key={link.name}
+                to={link.path} 
+                onClick={() => setIsMenuOpen(false)} 
+                className="text-slate-700 font-medium hover:text-brand-600 transition-colors text-center text-lg pb-2 border-b border-white/20 last:border-0"
+              >
+                {link.name}
+              </Link>
+            ))}
           </motion.div>
         )}
       </AnimatePresence>

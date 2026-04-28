@@ -1,57 +1,77 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-24 px-4 bg-white relative">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-        
-        {/* Image Column */}
-        <motion.div 
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8 }}
-          className="relative"
-        >
-          <div className="absolute inset-0 bg-brand-100 rounded-[2rem] transform translate-x-4 translate-y-4"></div>
-          <img 
-            src="/doctor_profile_1777228706920-BUuCSS3N.png" 
-            alt="Dr. Suchithra" 
-            className="relative z-10 rounded-[2rem] shadow-xl shadow-slate-200/50 object-cover w-full h-[600px]"
-          />
-        </motion.div>
-
-        {/* Content Column */}
-        <motion.div
-           initial={{ opacity: 0, x: 50 }}
-           whileInView={{ opacity: 1, x: 0 }}
-           viewport={{ once: true, margin: "-100px" }}
-           transition={{ duration: 0.8 }}
-        >
-          <h2 className="font-serif text-4xl md:text-5xl text-slate-900 mb-6 leading-tight">
-            A quieter, more considered kind of dermatology.
-          </h2>
-          <p className="text-slate-600 text-lg mb-8 leading-relaxed">
-            Led by Dr. Suchithra, our clinic blends clinical excellence with a calming, luxurious environment. We understand that your skin is unique, which is why every treatment plan is tailored specifically to you, utilizing the latest in dermatological science.
-          </p>
-
-          <div className="grid grid-cols-2 gap-6">
-            <div className="bg-brand-50 p-6 rounded-2xl">
-              <div className="text-3xl font-serif text-brand-600 mb-1">12+</div>
-              <div className="text-sm font-medium text-slate-600">Years of Practice</div>
+    <section id="about" className="py-24 bg-brand-50 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          
+          {/* Image Side */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="relative"
+          >
+            <div className="aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl relative z-10">
+              <img 
+                src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=800" 
+                alt="Clinic Care" 
+                className="w-full h-full object-cover"
+              />
             </div>
-            <div className="bg-brand-50 p-6 rounded-2xl">
-              <div className="text-3xl font-serif text-brand-600 mb-1">8,000+</div>
-              <div className="text-sm font-medium text-slate-600">Treated Patients</div>
-            </div>
-            <div className="bg-brand-50 p-6 rounded-2xl col-span-2 sm:col-span-1">
-              <div className="text-3xl font-serif text-brand-600 mb-1">06</div>
-              <div className="text-sm font-medium text-slate-600">Specialisations</div>
-            </div>
-          </div>
-        </motion.div>
+            {/* Decorative Elements */}
+            <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-brand-200/50 rounded-full blur-3xl -z-0"></div>
+            <div className="absolute top-10 -left-10 w-32 h-32 border-2 border-brand-300 rounded-full opacity-20"></div>
+          </motion.div>
 
+          {/* Text Side */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <span className="text-brand-600 font-semibold tracking-[0.2em] uppercase text-xs mb-6 block">
+              The Clinic Story
+            </span>
+            <h2 className="text-4xl md:text-5xl font-serif text-slate-900 leading-[1.2] mb-8">
+              Dermatology practiced <br />
+              <span className="italic font-light text-brand-500">with intention.</span>
+            </h2>
+            
+            <div className="space-y-6 text-slate-600 text-lg leading-relaxed font-light mb-10">
+              <p>
+                At Aura Skin Clinic, we listen first, diagnose with precision, and treat with a deep commitment 
+                to uncovering the root cause of your concerns.
+              </p>
+              <p>
+                Dr. Emily Chen and our dedicated team integrate advanced medical science with an empathetic 
+                understanding of your skin's unique journey. Every detail reflects our promise to deliver 
+                personalized care at the highest standard.
+              </p>
+            </div>
+
+            <div className="flex flex-wrap gap-8 items-center">
+              <Link 
+                to="/about" 
+                className="bg-slate-900 text-white px-8 py-4 rounded-xl font-medium hover:bg-brand-600 transition-all shadow-lg hover:shadow-xl"
+              >
+                Learn Our Full Story
+              </Link>
+              <div className="flex items-center gap-4">
+                <span className="text-4xl font-serif text-brand-600">15+</span>
+                <span className="text-[10px] uppercase tracking-widest text-slate-400 font-bold leading-tight">
+                  Years of <br /> Excellence
+                </span>
+              </div>
+            </div>
+          </motion.div>
+
+        </div>
       </div>
     </section>
   );
