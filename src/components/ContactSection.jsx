@@ -24,7 +24,7 @@ export default function ContactSection({ openBooking }) {
           
           <div className="space-y-8 mb-12">
             <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-brand-500 shadow-sm shrink-0">
+              <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-brand-500 shadow-md shrink-0">
                 <MapPin size={24} />
               </div>
               <div>
@@ -34,7 +34,7 @@ export default function ContactSection({ openBooking }) {
             </div>
 
             <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-brand-500 shadow-sm shrink-0">
+              <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-brand-500 shadow-md shrink-0">
                 <Clock size={24} />
               </div>
               <div>
@@ -44,7 +44,7 @@ export default function ContactSection({ openBooking }) {
             </div>
 
             <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-brand-500 shadow-sm shrink-0">
+              <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-brand-500 shadow-md shrink-0">
                 <Phone size={24} />
               </div>
               <div>

@@ -9,7 +9,7 @@ export default function ExperienceSection() {
   ];
 
   return (
-    <section className="py-32 bg-white overflow-hidden">
+    <section className="py-32 bg-brand-50 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="flex flex-col md:flex-row gap-12 items-end mb-16">
@@ -45,7 +45,7 @@ export default function ExperienceSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="group relative aspect-w-3 aspect-h-4 overflow-hidden rounded-2xl"
+              className="group relative aspect-w-3 aspect-h-4 overflow-hidden rounded-2xl shadow-xl shadow-slate-200/50"
             >
               <img 
                 src={img.src} 

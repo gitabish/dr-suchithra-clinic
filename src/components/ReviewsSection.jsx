@@ -22,7 +22,7 @@ const reviews = [
 
 export default function ReviewsSection() {
   return (
-    <section id="reviews" className="py-24 px-4 bg-gradient-to-b from-white via-brand-50/30 to-brand-50/50 relative overflow-hidden">
+    <section id="reviews" className="py-24 px-4 bg-gradient-to-b from-brand-50/30 via-brand-50/60 to-brand-50 relative overflow-hidden">
       <div className="max-w-7xl mx-auto">
         
         {/* Top Section: Heading & Rating Card */}

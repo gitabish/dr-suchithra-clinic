@@ -62,7 +62,7 @@ export default function TreatmentsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-white p-10 rounded-3xl border border-slate-100 hover:border-brand-200 hover:shadow-xl transition-all duration-300 group"
+              className="bg-white p-10 rounded-3xl border border-slate-100 shadow-md hover:border-brand-200 hover:shadow-xl transition-all duration-300 group"
             >
               {treatment.icon}
               <h3 className="text-2xl font-serif text-slate-900 mb-4 group-hover:text-brand-600 transition-colors">

@@ -37,7 +37,7 @@ const PhilosophySection = () => {
   ];
 
   return (
-    <section className="py-24 bg-white relative overflow-hidden">
+    <section className="py-24 bg-brand-50 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
@@ -73,7 +73,7 @@ const PhilosophySection = () => {
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
           {philosophies.map((item, index) => (
             <motion.div 
               key={index}
@@ -81,7 +81,7 @@ const PhilosophySection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="group"
+              className="bg-white p-8 rounded-[2rem] shadow-md border border-brand-50/50 hover:shadow-xl hover:border-brand-100 transition-all duration-300 group"
             >
               <div className="w-14 h-14 bg-brand-50 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-brand-100 transition-all duration-300">
                 {item.icon}

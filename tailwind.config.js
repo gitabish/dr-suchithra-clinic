@@ -8,11 +8,11 @@ export default {
     extend: {
       colors: {
         brand: {
-          50: '#faf9f8', /* Very light beige/white */
+          50: '#dfeeec', /* Mint Green */
           100: '#f5f4f1', /* Light beige */
           200: '#e8e5df', /* Soft gray beige */
           300: '#d7d2c9', /* Sand */
-          400: '#c1b8ad', 
+          400: '#c1b8ad',
           500: '#a79c8e', /* Primary Accent - muted taupe */
           600: '#8c8072',
           700: '#75695d',
@@ -25,6 +25,7 @@ export default {
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
         serif: ['"Playfair Display"', 'serif'],
+        agomo: ['Agoma', 'sans-serif'],
       }
     },
   },

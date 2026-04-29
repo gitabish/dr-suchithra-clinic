@@ -7,7 +7,7 @@ export default function HeroSection({ openBooking }) {
   return (
     <section className="relative min-h-[90vh] pt-24 pb-12 overflow-hidden bg-brand-50 flex items-center">
       {/* Decorative Background Elements */}
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-slate-100/50 -skew-x-12 transform translate-x-1/4 pointer-events-none"></div>
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-brand-100/30 -skew-x-12 transform translate-x-1/4 pointer-events-none"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -30,7 +30,7 @@ export default function HeroSection({ openBooking }) {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
-              className="text-5xl md:text-6xl lg:text-7xl font-serif font-light text-slate-900 leading-[1.1] mb-8 tracking-tight"
+              className="text-5xl md:text-6xl lg:text-7xl font-agomo font-bold text-slate-900 leading-[1.1] mb-8 tracking-tight"
             >
               Advanced <span className="font-semibold italic text-brand-600">Dermatology</span> & Aesthetic Science
             </motion.h1>

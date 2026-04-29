@@ -20,7 +20,7 @@ export default function Navbar({ openBooking }) {
         initial={{ y: -50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6 }}
-        className="w-full max-w-6xl glass rounded-full px-4 md:px-6 py-2.5 md:py-3 flex items-center justify-between shadow-lg shadow-pink-100/50"
+        className="w-full max-w-6xl glass rounded-full px-4 md:px-6 py-2.5 md:py-3 flex items-center justify-between shadow-lg shadow-slate-200/50"
       >
         <Link to="/" className="flex items-center gap-2 md:gap-3">
           <img src="/logo.png" alt="Aura Skin Clinic Logo" className="w-10 h-10 md:w-14 md:h-14 object-contain mix-blend-multiply contrast-125 saturate-150 drop-shadow-sm" />

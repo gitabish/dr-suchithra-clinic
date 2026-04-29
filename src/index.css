@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Agoma';
+  src: url('/AGOMA-Regular-BF69048b822ad02.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -14,7 +22,7 @@
 }
 
 .glass {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(223, 238, 236, 0.7);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.3);
